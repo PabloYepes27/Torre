@@ -1,9 +1,13 @@
 let user_data = {}
 let job_data = {}
 let comparison = {}
+let users = []
+let percentages = {}
+let total_strengths = 0
 
 function getUserData() {
     var username = $('#input_username').val()
+    users.push(username)
     console.log(username)
     
     const proxy_url = "https://cors-anywhere.herokuapp.com/"
@@ -15,6 +19,8 @@ function getUserData() {
             strengths.push(name['name'])
         }
         user_data[username] = strengths
+        
+        document.getElementById("participants").innerHTML =  `${users}`;
     },'json').fail(function (data) {
         console.log(data)
     })
@@ -66,14 +72,26 @@ function compareUsers() {
         })
         comparison[user] = count
     }
+    let total_strengths = job_data['objective'].length
     let winner = ""
     for (const key in comparison) {
+        // console.log(`key ${key}`)
+        percentages[key] = `${((comparison[key]/total_strengths)*100).toFixed(1)}%`
+        // console.log(JSON.stringify(percentages))
         let point = 0
         if (comparison[key] > point) {
             point = comparison[key]
             winner = key
         }
     }
-    document.getElementById("prueba").innerHTML = `<h1> el ganador es ${winner} </h1>`;
-    console.log(winner)
+    // console.log(winner)
+    if (winner != "") {
+        document.getElementById("selected").innerHTML = `<h3> The candidate who matches the most is </h3> <h1>${winner} </h1>`;
+    } else {
+        document.getElementById("selected").innerHTML = `<h3> There are no compatible candidates </h3>`;
+    }
+    // console.log(`${percentages}`)
+
+    document.getElementById("ranges").innerHTML = `${JSON.stringify(percentages)}`;
+
 }

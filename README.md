@@ -51,6 +51,8 @@ cd Torre
 python3 -m app
 ```
 
+* Go to your http://localhost:5000/
+
 ---
  
 ## Enviroment:clipboard:
