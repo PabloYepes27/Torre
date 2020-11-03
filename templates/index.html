@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="{{url_for('static', filename = 'style.css')}}" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torre Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  </head>
+  <body>
+    
+    <input type="checkbox" id="check">
+    <!--header area start-->
+    <header>
+      <div class="left_area">
+        <h3>Torre <span>Test</span></h3>
+      </div>
+      <div class="right_area">
+        <a href="#" class="logout_btn">Logout</a>
+      </div>
+    </header>
+    <div class="sidebar">
+      <div class="profile_info">
+        <img src="../static/images/Torre_logo.png" class="profile_image" alt="">
+        <h4>Admin</h4>
+      </div>
+      <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+      <a href="#"><i class="fas fa-users"></i><span>Users</span></a>
+      <a href="#"><i class="fas fa-briefcase"></i><span>Positions</span></a>
+    </div>
+  </body>
+  </html>
