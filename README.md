@@ -14,7 +14,7 @@
  
 ## General Description:newspaper:
  
-Creation of a dashboard to display user and job information, API development with flask for communication with the Torre endpoints
+Creation of a dashboard to display user and job information, development with flask for communication with the Torre endpoints
 
 ---
 
@@ -35,7 +35,7 @@ cd Torre
 
 * To run the api with flask.
 ```
-python3 -m api.v1.app
+python3 -m api
 ```
 
 ---
