@@ -7,7 +7,6 @@
 - Instalation:wrench:
 - Enviroment:clipboard:
 - Built with:hammer:
-- Resources:books:
 - Author:black_nib:
  
 ---
@@ -15,6 +14,20 @@
 ## General Description:newspaper:
  
 Creation of a dashboard to display user and job information, development with flask for communication with the Torre endpoints
+
+Some usernames:
+- juanpabloyepest
+- julianfrancor
+- deiwin
+- samisoza20
+
+some positions id:
+- KWNkY7wO
+- xWpP66WK
+- qdPopbwb
+- OdvqqAwj
+
+Add a job ID in the text field on the left, press the button and read the job description and responsibilities below; then add different users with their usernames to find out who is the best candidate based on their strengths, also you can see what are the match percentages of each candidate 
 
 ---
 
@@ -35,7 +48,7 @@ cd Torre
 
 * To run the api with flask.
 ```
-python3 -m api
+python3 -m app
 ```
 
 ---
@@ -53,14 +66,6 @@ This project is interpreted/tested on Ubuntu 14.04 LTS using python3 (version 3.
 * HTML
 * CSS
 * JS
- 
----
- 
-## Resources:books:
- 
-
-* []()
-
  
 ---
  
