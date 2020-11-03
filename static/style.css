@@ -33,10 +33,10 @@ header{
   float: right;
   margin-top: -30px;
   margin-right: 40px;
-  border-radius: 2px;
-  font-size: 15px;
+  border-radius: 5px;
+  font-size: 20px;
   font-weight: 600;
-  color: #fff;
+  color: rgb(0, 0, 0);
   transition: 0.5s;
   transition-property: background;
 }
@@ -132,22 +132,13 @@ label #sidebar_btn:hover{
 
 .content{
   width: (100% - 250px);
-  margin-top: 60px;
+  margin-top: 100px;
   padding: 20px;
   margin-left: 250px;
-  background: url(background.png) no-repeat;
-  background-position: center;
-  background-size: cover;
   height: 100vh;
   transition: 0.5s;
-}
-
-#check:checked ~ .content{
-  margin-left: 60px;
-}
-
-#check:checked ~ .sidebar .profile_info{
-  display: none;
+  display: block;
+  align-content: center;
 }
 
 #check{
@@ -158,13 +149,60 @@ label #sidebar_btn:hover{
   display: none;
 }
 
-.content .card p{
-  background: #fff;
-  padding: 15px;
-  margin-bottom: 10px;
-  font-size: 14px;
-  opacity: 0.8;
+.content .top_data {
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
+
+.content .top_data .left_position {
+  height: 60%;
+  width: 50%;
+  flex-direction: column;
+}
+
+.content .top_data .right_users {
+  height: 60%;
+  width: 50%;
+}
+
+#title{
+  padding: 2px;
+}
+
+.content .bottom_winner {
+  /* height: 40%; */
+  align-content: center;
+  justify-content: center;
+  align-content: center;
+  display: block;
+}
+
+.content .bottom_winner .request_button{
+  margin-right: 50%;
+}
+
+.request_button{
+  padding: 5px;
+  background: #CDDC39;
+  text-decoration: none;
+  float: right;
+  margin-right: 40px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  transition: 0.5s;
+  transition-property: background;
+}
+
+.content .text_field{
+  align-items: center;
+  display: grid;
+}
+
+
 
   /* Responsive CSS */
   
@@ -182,6 +220,7 @@ label #sidebar_btn:hover{
       margin-top: 0;
       padding: 10px 20px;
       transition: 0s;
+      display: block;
     }
   
     #check:checked ~ .content{

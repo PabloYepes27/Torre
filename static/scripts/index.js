@@ -20,6 +20,15 @@ function getUserData() {
     })
 }
 
+function search(nameKey, myArray){
+    for (var i=0; i < myArray.length; i++) {
+        console.log(`${myArray[i]['code']} <==> ${nameKey}`)
+        if (myArray[i]['code'] === nameKey) {
+            return myArray[i]['content'];
+        }
+    }
+}
+
 function getPositionData() {
     var position = $('#input_position').val()
     console.log(position)
@@ -32,15 +41,14 @@ function getPositionData() {
             strengths.push(name['name'])
         }
         job_data['objective'] = strengths
+        document.getElementById("info_job").innerHTML = `<h4>${data['objective']}<h4>`;
+        document.getElementById("job_description").innerHTML = `${search("requirements", data['details'])}`;
     },'json').fail(function (data) {
         console.log(data)
     })
+
 }
 
-// debug
-function watchUser() {
-    console.log(user_data)
-}
 
 
 function compareUsers() {
@@ -66,9 +74,6 @@ function compareUsers() {
             winner = key
         }
     }
+    document.getElementById("prueba").innerHTML = `<h1> el ganador es ${winner} </h1>`;
     console.log(winner)
-    // console.log(Object.keys(comparison).find(key => comparison[key] === (Object.values(comparison)).rsort()[0]))
-    // // console.log(Object.values(comparison).rsort()[0])
-    // // console.log(comparison)
-
 }

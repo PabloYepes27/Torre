@@ -28,11 +28,7 @@
       </div>
       <div class="mobile_nav_items">
         <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
-        <a href="#"><i class="fas fa-users"></i><span>Users</span></a>
-        <a href="#"><i class="fas fa-briefcase"></i><span>Positions</span></a>
-        <a href="#"><i class="fas fa-th"></i><span>Forms</span></a>
         <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
-        <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
       </div>
     </div>   
     <div class="sidebar">
@@ -41,21 +37,30 @@
         <h4>Admin</h4>
       </div>
       <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
-      <a href="#"><i class="fas fa-users"></i><span>Users</span></a>
-      <a href="#"><i class="fas fa-briefcase"></i><span>Positions</span></a>
-      <a href="#"><i class="fas fa-table"></i><span>Tables</span></a>
       <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
-      <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
     </div>
 
-    <!-- This goes in another view -->
+    <!-- This should goes in another view -->
     <div class="content">
-      <input class="text_field" id="input_username" type="text">
-      <button class="request_button" id="user_request" onclick="getUserData()">Add User</button>
-      <input class="text_field" id="input_position" type="text">
-      <button class="request_button" id="position_request" onclick="getPositionData()">Add Position</button>
-      <button class="request_button" id="watch_users" onclick="watchUser()">Users</button>
-      <button class="request_button" id="compare_users" onclick="compareUsers()">Compare</button>
+      <div class="top_data">
+        <div class="left_position">
+          <input class="text_field" id="input_position" type="text">
+          <button class="request_button" id="position_request" onclick="getPositionData()">Add Position</button>
+          <h3 id="title">Description</h3>
+          <div id="info_job"></div>
+          <div id="job_description"></div>
+
+        </div>
+        <div class="right_users">
+          <input class="text_field" id="input_username" type="text">
+          <button class="request_button" id="user_request" onclick="getUserData()">Add User</button>
+          <div id="participants"><h3 id="title">Participants</h3></div>
+        </div>
+      </div>
+      <div class="bottom_winner">
+        <button class="request_button" id="compare_users" onclick="compareUsers()">Match</button>
+        <div id="selected"></div>
+      </div>
     </div>
     
     <script type="text/javascript">
